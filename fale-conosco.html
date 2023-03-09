@@ -45,60 +45,64 @@
                         <h3 class="direita">Atualizado em 17/fevereiro/2023</h3>
                     </hgroup>
                 </header> 
-        <form method="post" id="fContacto" action="mailto:rui.santos@ae-almeirim.pt" oninput="calc_total();">
-            <fieldset id="utilizador">
-                <legend>Identificação do Utilizador</legend>
-                <p><label for="iNome">Nome: </label><input type="text" name="tNome" id="iNome" size="20" maxlength="30" placeholder="Nome completo"></p>
-                <p><label for="iSenha">Senha: </label><input type="password" name="tSenha" id="iSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
-                <p><label for="iEmail">E-mail: </label><input type="email" name="tEmail" id="iEmail" size="20" maxlength="40"></p>
-                
-                    <fieldset id="sexo">Sexo:<br/>
-                        <input type="radio" name="tSexo" id="iMasc" checked><label for="iMasc">Masculino</label><br/>
-                        <input type="radio" name="tSexo" id="iFem"><label for="iFem">Feminino</label>
-                    </fieldset>
-                <p>Data de Nascimento: <input type="date" name="tData" id="iData"></p>
+
+<form method="post" id="fContacto" action="mailto:rui.santos@ae-almeirim.pt" oninput="calc_total();">
+    <fieldset id="utilizador">
+        <legend>Identificação do Utilizador</legend>
+            <p><label for="iNome">Nome: </label><input type="text" name="tNome" id="iNome" size="20" maxlength="30" placeholder="Nome completo"></p>
+            <p><label for="iSenha">Senha: </label><input type="password" name="tSenha" id="iSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p><label for="iEmail">E-mail: </label><input type="email" name="tEmail" id="iEmail" size="20" maxlength="40"></p>
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                    <input type="radio" name="tSexo" id="iMasc" checked/> <label for="iMasc">Masculino</label><br>
+                    <input type="radio" name="tSexo" id="iFem"/> <label for="iFem">Feminino</label>
             </fieldset>
-            <fieldset id="endereco">
-                <legend>Endereço do Utilizador</legend>
-                <p><label for="iRua">Morada: </label><input type="text" name="tRua" id="iRua" size="15" maxlength="80" placeholder="Rua, Av, Trav, ..."></p>
-                <p><label for="iNum">Número: </label><input type="number" name="tNum" id="iNum" min="0" max="9999"></p>
-                <p><label for="iDis">Distrito: </label>
+            <p>Data de Nascimento: <input type="date" name="tData" id="iData"></p>
+    </fieldset>
+    
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+            <p><label for="iRua">Morada: </label><input type="text" name="tRua" id="iRua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."></p>
+            <p><label for="iNum">Número: </label><input type="number" name="tNum" id="iNum" min="0" max="9999"></p>
+            <p><label for="iDis">Distrito: </label>
                 <select name="tDis" id="iDis">
                     <optgroup label="Região Centro">
                         <option value="Avr">Aveiro</option>
                         <option value="Grd">Guarda</option>
                         <option value="Cbr">Coimbra</option>
-                        <option value="CBr">Castelo Branco</option>
+                        <option value="CB">Castelo Branco</option>
                         <option value="Lra">Leiria</option>
-                    </optgroup>
-                    <optgroup label="Região de Lisboa">
-                        <option value="Lbs">Lisboa</option>
-                        <option value="Str">Santarém</option>
-                        <option value="Stb">Setúbal</option>
-                    </optgroup>
-                </select></p>
-                <p><label for="iCid">Cidade: </label><input type="text" name="tCid" id="iCid" maxlength="40" size="20" placeholder="Nome da sua cidade"></p>
-                <datalist id="cidades">
-                    <option value="Almeirim"></option>
-                    <option value="Fazendas de Almeirim"></option>
-                    <option value="Benfica do Ribatejo"></option>
-                    <option value="Raposa"></option>
-                </datalist>
-            </fieldset>
-            <fieldset id="mensagem">
-                <legend>Mensagem do Utilizador</legend>
-                <p><label for="iUrg">Grau de urgência: </label>Mín.<input type="range" name="tUrg" id="iUrg" min="0" max="10" step="2">Máx.</p>
-                <p><label for="iMsg">Mensagem: </label><textarea name="tMsg" id="iMsg" cols="40" rows="5" placeholder="Escreva a sua mensagem"></textarea></p>
-            </fieldset>
-            <fieldset id="pedido">
-                <legend>Quero um Google Glass</legend>
-                <p><input type="checkbox" name="tPed" id="iPed" checked><label for="iPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
-                <p><label for="iCor">Cor: </label><input type="color" name="tCor" id="iCor" value="#FF0000"></p>
-                <p><label for="iQtd">Quantidade: </label><input type="number" name="tQtd" id="iQtd" min="0" max="5" value="0"></p>
-                <p><label for="iTot">Preço Total: € </label><input type="text" name="tTot" id="iTot" placeholder="Total a Pagar" readonly></p>
-                </fieldset>
-                <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
-        </form>
+                    </optgroup> 
+                    <optgroup label="Região Lisboa">
+                        <option value="Lba">Lisboa</option>
+                        <option value="Str" selected>Santarém</option>
+                        <option value="Stb">Setúbal</option> 
+                    </optgroup>             
+            </select></p>
+            <p><label for="iCid">Cidade: </label><input type="text" name="tCid" id="iCid" maxlength="40" size="20" placeholder="Nome da sua Cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Almeirim"></option>
+                <option value="Fazendas de Almeirim"></option>
+                <option value="Benfica do Ribatejo"></option>
+                <option value="Raposa"></option>
+            </datalist>
+    </fieldset>
+    
+    <fieldset id="mensagem">
+        <legend>Mensagem do Utilizador</legend>
+            <p><label for="iUrg">Grau de Urgência: </label>Mín.<input type="range" name="tUrg" id="iUrg" min="0" max="10" step="2">Máx.</p>
+            <p><label for="iMsg">Mensagem: </label><textarea name="tMsg" id="iMsg" cols="40" rows="5" placeholder="Escreva a sua mensagem"></textarea></p>
+    </fieldset>
+    
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+            <p><input type="checkbox" name="tPed" id="iPed" checked><label for="iPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="iCor">Cor: </label><input type="color" name="tCor" id="iCor" value="#0000FF"></p>
+            <p><label for="iQtd">Quantidade: </label><input type="number" name="tQtd" id="iQtd" min="0" max="5" value="0"></p>
+            <p><label for="iTot">Preço Total: € </label><input type="text" name="tTot" id="iTot" placeholder="Total a Pagar" readonly></p>
+    </fieldset>
+    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+</form>
     </article>
 </section>
 <footer id="rodape">
